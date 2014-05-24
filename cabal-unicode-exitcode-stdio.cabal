@@ -1,0 +1,24 @@
+name:                cabal-unicode-exitcode-stdio
+description:         `cabal test` with this file prints
+                    .
+                     > test: Ã¼
+                     > Test suite test: FAIL
+                    .
+                     > test: ü
+                     > Test suite test: FAIL
+version:             0.1.0.0
+license:             BSD3
+license-file:        LICENSE
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable cabal-unicode-exitcode-stdio
+  main-is:             Main.hs
+  build-depends:       base >=4.7 && <4.8
+  default-language:    Haskell2010
+
+test-suite test
+  Type: exitcode-stdio-1.0
+  build-depends: base
+  main-is: test.hs
+  default-language:    Haskell2010
